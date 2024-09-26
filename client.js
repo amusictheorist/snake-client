@@ -20,7 +20,21 @@ const connect = function() {
     console.log("Successfully connected to game server");
 
     // Send name to server upon connection
-    conn.write("Name: AMT"); // Replace ABC with your chosen initials
+    conn.write("Name: AMT");
+
+
+
+    // conn.write("Move: up");
+    // setTimeout(() => {
+    //   conn.write("Move: right");
+    // }, 500);
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    // }, 1000);
+    // setTimeout(() => {
+    //   conn.write("Move: right");
+    // }, 1500);
+    
   });
 
   return conn;
