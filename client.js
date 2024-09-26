@@ -1,10 +1,11 @@
 const net = require("net");
+const { IP, PORT, MOVE_UP_KEY, MOVE_LEFT_KEY, MOVE_DOWN_KEY, MOVE_RIGHT_KEY, HUNGRY_MESSAGE, SSS_MESSAGE, PYTHON_MESSAGE, RATTLE_MESSAGE } = require("./constants");
 
 // Establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541
+    IP,
+    PORT
   });
 
   // Interpret incoming data as text
@@ -21,19 +22,6 @@ const connect = function() {
 
     // Send name to server upon connection
     conn.write("Name: AMT");
-
-
-
-    // conn.write("Move: up");
-    // setTimeout(() => {
-    //   conn.write("Move: right");
-    // }, 500);
-    // setTimeout(() => {
-    //   conn.write("Move: up");
-    // }, 1000);
-    // setTimeout(() => {
-    //   conn.write("Move: right");
-    // }, 1500);
     
   });
 
