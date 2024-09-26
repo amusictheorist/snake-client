@@ -21,6 +21,14 @@ if (key === "w") {
   connection.write("Move: down");
 } else if (key === "d") {
   connection.write("Move: right");
+} else if (key === "h") {
+  connection.write("Say: I'm hungry");
+} else if (key === "z") {
+  connection.write("Say: ssssssssss");
+} else if (key === "p") {
+  connection.write("Say: this isn't python!");
+} else if (key === "c") {
+  connection.write("Say: rattle my brain");
 }
 };
 
